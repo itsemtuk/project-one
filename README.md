@@ -10,7 +10,7 @@ have reminders to pick
 which Api's are we using? 
 
 
-Project Title:  Planters 
+Project Title:  Forget Me Not
 Team members :   Adam, Ben, Tabbi. 
 
 Breif description with user story: 
@@ -21,4 +21,12 @@ Breif description with user story:
 
 Api 1:   Plant information  (e.g ideal temperature) 
 
-Api 2 :   Weather ( to know what adjustments to make to reach the plant's ideal temperature.)
+Api 2 :   Weather ( to know what adjustments to make to reach the plant's ideal temperature.)     Would be nice to see if there is one that has a weather forecast. 
+
+
+Things needed on the webpage: 
+    Searchbox to find plant.
+    image list of owned plants - to see their background change.
+    cards with plants in and then tells you when to water it and plants ideal plant temp with the weather next to it.
+
+(added feature) have user able to choose if it is an indoor or outdoor plant. (for an outdoor plant if it is cold outside it could say bring this plant inside e.t.c)
