@@ -12,9 +12,7 @@ have reminders to pick
 which Api's are we using?
 
 
-Project Title:  Planters
-Team members :   Adam, Ben, Tabbi.
-=======
+
 Project Title:  Forget Me Not
 Team members :   Adam, Ben, Tabbi. 
 
@@ -24,11 +22,9 @@ Breif description with user story:
     How does the product solve that problem?   Allows the user to add a list of their plants, with images.  Allows the user to create a schedule of when to water their plants.  Plants image background changes colour depending on how close it is to needing to be watered. (green - good first 50%      orange - becoming due - last 30% of time    red - due day/ anytime past)
 
 
-Api 1:   Plant information  (e.g ideal temperature)
+Api 1:   Plant information  (e.g ideal temperature)  Available at:   https://rapidapi.com/mnai01/api/house-plants2/   by, mnai.
 
-<<<<<<< HEAD
-Api 2 :   Weather ( to know what adjustments to make to reach the plant's ideal temperature.)
-=======
+
 Api 2 :   Weather ( to know what adjustments to make to reach the plant's ideal temperature.)     Would be nice to see if there is one that has a weather forecast. 
 
 
