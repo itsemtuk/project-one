@@ -8,13 +8,6 @@ As a plant owner I often forget when to water which plant.
 Have an api to pick your plant
 have reminders to pick
 
-
-which Api's are we using?
-
-
-Project Title:  Planters
-Team members :   Adam, Ben, Tabbi.
-=======
 Project Title:  Forget Me Not
 Team members :   Adam, Ben, Tabbi. 
 
@@ -26,9 +19,6 @@ Breif description with user story:
 
 Api 1:   Plant information  (e.g ideal temperature)
 
-<<<<<<< HEAD
-Api 2 :   Weather ( to know what adjustments to make to reach the plant's ideal temperature.)
-=======
 Api 2 :   Weather ( to know what adjustments to make to reach the plant's ideal temperature.)     Would be nice to see if there is one that has a weather forecast. 
 
 
