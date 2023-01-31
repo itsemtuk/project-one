@@ -14,7 +14,9 @@ which Api's are we using?
 
 
 Project Title:  Forget Me Not
+
 Team members :   Adam, Ben, Tabbi. 
+
 
 Breif description with user story:
     Who is your audience?   Houseplant owners
