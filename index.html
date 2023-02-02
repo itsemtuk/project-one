@@ -8,17 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-  <header> 
+  <header class=""""> 
     <h1> Forget Me Not </h1>
     <!-- Nav Bar linking to points on page-->
+    <nav> 
+      <a href="#top"> Home </a>
+      <a href="#dashboard"> Dashboard</a>
+      <a href="schedule"> Plants </a>  <!-- This needs to link to plants area on dash-->
+      <a href="#search"> Search </a> <!-- CURRENTLY ISNT CONNECTED == This needs to link to or open up the search bar if we choose to hide it.-->
+    </nav>
     <!-- hero banner with text of short explanation of the sites point-->
   </header>
   <main>
     <!-- Need Search Form Here Where the user can search for their plants.-->
     <section> 
-      <h2> My Dashboard </h2>
+      <h2 id="dashboard"> My Dashboard </h2>
     <!-- This section is for the plant cards???-->
-      <section class="secmain">
+      <section id="schedule" class="secmain">
         <div class="card-deck">
         <div class="card">
             <img src="..." class="card-img-top" alt="...">
