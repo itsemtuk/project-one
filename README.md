@@ -1,9 +1,6 @@
 # Forget-me-not
 ## When do I water my plant?
 
-
-
-
 As a plant owner I often forget when to water which plant.
 Have an api to pick your plant
 have reminders to pick
@@ -27,7 +24,7 @@ Breif description with user story:
 Api 1:   Plant information  (e.g ideal temperature)  Available at:   https://rapidapi.com/mnai01/api/house-plants2/   by, mnai.
 
 
-Api 2 :   Weather ( to know what adjustments to make to reach the plant's ideal temperature.)     Would be nice to see if there is one that has a weather forecast. 
+Api 2:   Weather ( to know what adjustments to make to reach the plant's ideal temperature.)     Would be nice to see if there is one that has a weather forecast. 
 
 
 Things needed on the webpage: 
