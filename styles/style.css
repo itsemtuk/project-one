@@ -7,4 +7,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
+  padding: 25px;
+}
+
+.banner h3{
+  align-content: center;
 }
