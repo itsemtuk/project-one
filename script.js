@@ -44,6 +44,7 @@ fetch('https://house-plants2.p.rapidapi.com/category/Fern', options)
 
   May need to provide users with a lsit of house plants??  getAll will give us the master list.   - store variable of all the plants.  many pick one or two to use as an example.   (how can the user search through thi)
 
+  Can have it list out the available plants for the user?  Try searching for "fern or ..." 
 
   Use get all?
   when the user searches we need to have a way for them to change the search (swap the fern over)
