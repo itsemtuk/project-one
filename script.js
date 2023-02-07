@@ -18,6 +18,8 @@ fetch('https://house-plants2.p.rapidapi.com/all', options)
   .then(response => console.log(response))
   .catch(err => console.error(err));
 
+var plant = document.getElementById("locard");
+function shoe
 
 // Adam's attempt at API call bens edit. successfully received a response. However, am struggling to call data from within the response.
 
@@ -44,27 +46,24 @@ fetch('https://accuweatherstefan-skliarovv1.p.rapidapi.com/get24HoursConditionsB
 	.catch(err => console.error(err));
 
 
+  // Get location key by user. 
+
+var x = document.getElementById("locard");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+
 /* code to call api? 
 
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-		'X-RapidAPI-Host': 'house-plants2.p.rapidapi.com'
-	}
-};
-
-fetch('https://house-plants2.p.rapidapi.com/category/Fern', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err)); 
-  
-  then find the array index and what we're looking for e.g  console.log(response[0])
-
-  May need to provide users with a lsit of house plants??  getAll will give us the master list.   - store variable of all the plants.  many pick one or two to use as an example.   (how can the user search through thi)
-
-  Can have it list out the available plants for the user?  Try searching for "fern or ..." 
-
-  Use get all?
-  when the user searches we need to have a way for them to change the search (swap the fern over)
+1.  show weather on html 
   */
