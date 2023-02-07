@@ -2,6 +2,9 @@
 var category = "Fern";
 var queryURL = "https://house-plants2.p.rapidapi.com/category/" + category + "&apikey=48a7f35cbbmsh1b5e31dc2bd27b6p1f4b21jsn3f4de91390bd";
 
+
+
+// settings for API call
 const settings = {
 	"async": true,
 	"crossDomain": true,
@@ -14,11 +17,15 @@ const settings = {
 };
 
 
+// Adam's attempt at API call. successfully received a response. However, am struggling to call data from within the response.
+
+
 $.ajax(settings).then(function(response) {
   console.log(response);
-  // Create and save a reference to new empty table row
+  // the above code successfully produces API call
+
+  //bellow is experimenting with adding information from within the API call to a table like in the class example.
   var tableRow = $("<tr>");
-  // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
   var tabTitle=$("<td>");
   tabTitle.text("response.Categories");
   var tabYear = $("<td>");
