@@ -19,7 +19,7 @@ fetch('https://house-plants2.p.rapidapi.com/all', options)
   .catch(err => console.error(err));
 
 var plant = document.getElementById("locard");
-function shoe
+
 
 // Adam's attempt at API call bens edit. successfully received a response. However, am struggling to call data from within the response.
 
@@ -63,7 +63,45 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude;
 }
 
-/* code to call api? 
+/*  W E A T H E R    A P I   */
 
-1.  show weather on html 
-  */
+function getWeather() {
+  let temperature = document.getElementById("temperature");
+  let description = document.getElementById("description");
+  let location = document.getElementById("location");
+
+  let api = "https://api.openweathermap.org/data/2.5/weather";
+  let apiKey = "131250860830988b51dba3e6bb62323a";
+
+  let latitude = 47.058700;
+  let longitude = 15.457632;
+  let url = api +
+    "?lat=" +
+    latitude +
+    "&lon=" +
+    longitude +
+    "&appid=" +
+    apiKey +
+    "&units=imperial";
+
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      var temp = data.main.temp;
+      temp = (temp - 32) * 5 / 9;
+      temp = temp.toFixed(1);
+      temperature.innerHTML = temp + "° C";
+
+
+      temperature.innerHTML = temp; // OUTPUT
+      location.innerHTML = data.name; // OUTPUT
+      description.innerHTML = data.weather[0].main; //OUTPUT
+      temperature.innerHTML = temp;
+
+      document.getElementById("weather-pic").src = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
+    });
+}
+
+
+getWeather();
