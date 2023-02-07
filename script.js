@@ -63,7 +63,59 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude;
 }
 
-/*  W E A T H E R    A P I   */
+
+
+
+
+
+
+/*  W E A T H E R    A P I  131250860830988b51dba3e6bb62323a  */
+
+
+function weatherBalloon( cityID ) {
+	var key = '131250860830988b51dba3e6bb62323a';
+	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
+	.then(function(resp) { return resp.json() }) // Convert data to json
+	.then(function(data) {
+		drawWeather(data); // Call drawWeather
+	})
+	.catch(function() {
+		// catch any errors
+	});
+}
+
+window.onload = function() {
+  weatherBalloon( 6167865 );
+}
+
+
+
+function drawWeather( d ) {
+	var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+	var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+	
+	document.getElementById('description').innerHTML = d.weather[0].description;
+	document.getElementById('temp').innerHTML = celcius + '&deg;';
+	document.getElementById('location').innerHTML = d.name;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function getWeather() {
   let temperature = document.getElementById("temperature");
@@ -71,7 +123,7 @@ function getWeather() {
   let location = document.getElementById("location");
 
   let api = "https://api.openweathermap.org/data/2.5/weather";
-  let apiKey = "131250860830988b51dba3e6bb62323a";
+  let apiKey = "f146799a557e8ab658304c1b30cc3cfd";
 
   let latitude = 47.058700;
   let longitude = 15.457632;
