@@ -2,16 +2,33 @@
   padding: 20px;
 }
 
+h1 { 
+  float: left;
+}
+nav { 
+  float: right;
+}
+
 .banner { 
   background-image: url("hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   padding: 25px;
+  clear: both;
 }
 
 .banner h3{
   align-content: center;
   text-align: center;
   color:aliceblue;
+}
+
+#form { 
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  background-color: #F5D4AC;
 }
