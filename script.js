@@ -25,8 +25,8 @@ fetch('https://house-plants2.p.rapidapi.com/all', options)
 // Weather API Fetch 
 
 const encodedParams = new URLSearchParams();
-encodedParams.append("apiKey", "<REQUIRED>");
-encodedParams.append("locationKey", "<REQUIRED>");
+encodedParams.append("apiKey", "20fd700a8fmshaf893e7aac8fa88p12495ajs");
+encodedParams.append("locationKey", "328328");
 
 const options = {
 	method: 'POST',
