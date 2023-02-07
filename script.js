@@ -22,7 +22,26 @@ fetch('https://house-plants2.p.rapidapi.com/all', options)
 // Adam's attempt at API call bens edit. successfully received a response. However, am struggling to call data from within the response.
 
 
+// Weather API Fetch 
 
+const encodedParams = new URLSearchParams();
+encodedParams.append("apiKey", "<REQUIRED>");
+encodedParams.append("locationKey", "<REQUIRED>");
+
+const options = {
+	method: 'POST',
+	headers: {
+		'content-type': 'application/x-www-form-urlencoded',
+		'X-RapidAPI-Key': '20fd700a8fmshaf893e7aac8fa88p12495ajsn02ca0c80868d',
+		'X-RapidAPI-Host': 'AccuWeatherstefan-skliarovV1.p.rapidapi.com'
+	},
+	body: encodedParams
+};
+
+fetch('https://accuweatherstefan-skliarovv1.p.rapidapi.com/get24HoursConditionsByLocationKey', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
 
 
 /* code to call api? 
