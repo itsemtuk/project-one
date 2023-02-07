@@ -22,46 +22,6 @@ fetch('https://house-plants2.p.rapidapi.com/all', options)
 // Adam's attempt at API call bens edit. successfully received a response. However, am struggling to call data from within the response.
 
 
-$.ajax(settings).then(function(response) {
-  console.log(response);
-  // the above code successfully produces API call
-
-  //bellow is experimenting with adding information from within the API call to a table like in the class example.
-  var tableRow = $("<tr>");
-  var tabTitle=$("<td>");
-  tabTitle.text("response.Categories");
-  var tabYear = $("<td>");
-  tabYear.text("response.Disease");
-  var tabActors = $("<td>");
-  tabActors.text("response.Use");
-  // Append the td elements to the new table row
-  tableRow.append(tabTitle);
-  tableRow.append(tabYear);
-  tableRow.append(tabActors);
-  // Append the table row to the tbody element
-  $("tbody").append(tableRow);
-});
-
-
-
-
-// Repeat the above logic to add rows for two more movies of your choice    --  a more condensed method
-var movies = ["Dune", "Frozen", "Up", "The Jungle Book", "Mulan"];
-for (let i = 0; i<movies.length; i++) {
-  $.ajax(settings).then(function (response) {
-    console.log(response);
-    // Create and save a reference to new empty table row
-    var myNewRow = $("<tr>");
-    // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
-    var name = $('<td>').text(response.Categories);
-    var year = $('<td>').text(response.Disease);
-    var actors = $('<td>').text(response.Use);
-    // Append the td elements to the new table row
-    // Append the table row to the tbody element
-    $("tbody").append(myNewRow.append(name, year, actors));
-  });
-}
-// BONUS: Once complete, try to make your code as DRY as possible through the use of functions
 
 
 
@@ -81,6 +41,9 @@ fetch('https://house-plants2.p.rapidapi.com/category/Fern', options)
 	.catch(err => console.error(err)); 
   
   then find the array index and what we're looking for e.g  console.log(response[0])
+
+  May need to provide users with a lsit of house plants??  getAll will give us the master list.   - store variable of all the plants.  many pick one or two to use as an example.   (how can the user search through thi)
+
 
   Use get all?
   when the user searches we need to have a way for them to change the search (swap the fern over)
