@@ -18,13 +18,19 @@ fetch('https://house-plants2.p.rapidapi.com/all', options)
   .then(response => console.log(response))
   .catch(err => console.error(err));
 
-var plant = document.getElementById("locard");
+
+var userInput = document.querySelector("#query")
+var button = document.querySelector("#searchbutton")
+button.addEventListener("Click", function(e){
+  e.preventDefault()
+  console.log("Click");
+})
 
 
 // Adam's attempt at API call bens edit. successfully received a response. However, am struggling to call data from within the response.
 
 
-// Weather API Fetch 
+// Weather API Fetch
 
 const encodedParams = new URLSearchParams();
 encodedParams.append("apiKey", "20fd700a8fmshaf893e7aac8fa88p12495ajs");
@@ -46,7 +52,7 @@ fetch('https://accuweatherstefan-skliarovv1.p.rapidapi.com/get24HoursConditionsB
 	.catch(err => console.error(err));
 
 
-  // Get location key by user. 
+  // Get location key by user.
 
 var x = document.getElementById("locard");
 
@@ -74,7 +80,7 @@ function showPosition(position) {
 
 function weatherBalloon( cityID ) {
 	var key = '131250860830988b51dba3e6bb62323a';
-	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
+	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)
 	.then(function(resp) { return resp.json() }) // Convert data to json
 	.then(function(data) {
 		drawWeather(data); // Call drawWeather
@@ -92,8 +98,8 @@ window.onload = function() {
 
 function drawWeather( d ) {
 	var celcius = Math.round(parseFloat(d.main.temp)-273.15);
-	var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
-	
+	var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
+
 	document.getElementById('description').innerHTML = d.weather[0].description;
 	document.getElementById('temp').innerHTML = celcius + '&deg;';
 	document.getElementById('location').innerHTML = d.name;
