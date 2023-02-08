@@ -5,7 +5,8 @@ var queryURL = "https://house-plants2.p.rapidapi.com/category/" + category + "&a
 
 
 // settings for API call
-function getPlantData() {
+function getPlantData(e) {
+  e.preventDefault()
 const options = {
   method: 'GET',
   headers: {
@@ -14,7 +15,7 @@ const options = {
   }
 };
 
-fetch('https://house-plants2.p.rapidapi.com/all', options)
+fetch('https://house-plants2.p.rapidapi.com/id/53417c12-4824-5995-bce0-b81984ebbd1d', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
