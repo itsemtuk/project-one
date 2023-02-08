@@ -5,6 +5,7 @@ var queryURL = "https://house-plants2.p.rapidapi.com/category/" + category + "&a
 
 
 // settings for API call
+function getPlantData() {
 const options = {
   method: 'GET',
   headers: {
@@ -17,14 +18,11 @@ fetch('https://house-plants2.p.rapidapi.com/all', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
-
+}
 
 var userInput = document.querySelector("#query")
 var button = document.querySelector("#searchbutton")
-button.addEventListener("Click", function(e){
-  e.preventDefault()
-  console.log("Click");
-})
+button.addEventListener("click", getPlantData)
 
 
 // Adam's attempt at API call bens edit. successfully received a response. However, am struggling to call data from within the response.
