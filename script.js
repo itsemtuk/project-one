@@ -36,7 +36,7 @@ const encodedParams = new URLSearchParams();
 encodedParams.append("apiKey", "20fd700a8fmshaf893e7aac8fa88p12495ajs");
 encodedParams.append("locationKey", "328328");
 
-const options = {
+const newoptions = {
 	method: 'POST',
 	headers: {
 		'content-type': 'application/x-www-form-urlencoded',
