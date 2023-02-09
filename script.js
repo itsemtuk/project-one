@@ -7,24 +7,51 @@ var queryURL = "https://house-plants2.p.rapidapi.com/category/" + category + "&a
 // settings for API call
 function getPlantData(e) {
   e.preventDefault()
-const options = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': '6943474b94mshe185a424994f3c3p1e5b01jsn0d386b989267',
-    'X-RapidAPI-Host': 'house-plants2.p.rapidapi.com'
-  }
+}
+listOfPlants = ["fern" , "palm" , "aloe vera"]
+
+
+  //api call
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://house-plants2.p.rapidapi.com/all",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": "6943474b94mshe185a424994f3c3p1e5b01jsn0d386b989267",
+		"X-RapidAPI-Host": "house-plants2.p.rapidapi.com"
+	}
 };
 
-fetch('https://house-plants2.p.rapidapi.com/all', options)
-  .then(response => response.json())
-  .then(response => {
-    console.log(response);
+for (let i = 0; i<listOfPlants.length; i++) {
+$.ajax(settings).then(function(response) {
+  console.log(response);
+    var CardDeck = document.getElementById(".card-deck");
+    var Card = $("<div>");
+    var Img = $("<img>");
+    CardBody = $("<div>");
+    CardTitle = $("<h5>");
+    CardTitle.text(listOfPlants[i])
+    CardDeck.append(Card);
+    Card.append(Img , CardBody);
+    CardBody.append(CardTitle);
+    
+    
+
+
+
+
     document.getElementById("card-title").textContent = response["Common name"]
 
   })
   .catch(err => console.error(err));
 }
 
+// initial API call - Adam
+
+
+
+// search bar
 var userInput = document.querySelector("#query")
 var button = document.querySelector("#searchbutton")
 button.addEventListener("click", getPlantData)
