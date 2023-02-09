@@ -15,15 +15,21 @@ const options = {
   }
 };
 
-fetch('https://house-plants2.p.rapidapi.com/id/53417c12-4824-5995-bce0-b81984ebbd1d', options)
+fetch('https://house-plants2.p.rapidapi.com/all', options)
   .then(response => response.json())
-  .then(response => console.log(response))
+  .then(response => {
+    console.log(response);
+    document.getElementById("card-title").textContent = response["Common name"]
+
+  })
   .catch(err => console.error(err));
 }
 
 var userInput = document.querySelector("#query")
 var button = document.querySelector("#searchbutton")
 button.addEventListener("click", getPlantData)
+
+const string = JSON.stringify(options);
 
 
 // Adam's attempt at API call bens edit. successfully received a response. However, am struggling to call data from within the response.
